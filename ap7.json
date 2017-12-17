@@ -1,0 +1,91 @@
+{ "cards": [
+    {
+        "front": "The ability to compose and recompose an activity's view at runtime",
+        "back": "UI Flexibility"
+    },
+    {
+        "front": "Which one, activities or fragment provide more flexibility.",
+        "back": "Fragments"
+    },
+    {
+        "front": "2 examples of UI Flexibility",
+        "back": "1. Tables show both list and detail views(on tablets larger screens)\n2. Swiping left or right on detail views to see next/previous item."
+    },
+    {
+        "front": "Activities may change at runtime, but code must exist in",
+        "back": "the activity, thus activities are tightly coupled to the particular screen."
+    },
+    {
+        "front": "A controller object that an activity can deputize to perform tasks.",
+        "back": "Fragment"
+    },
+    {
+        "front": "Fragments were introduced in ",
+        "back": "Android 11 (Honeycomb) with Android tablets"
+    },
+    {
+        "front": "Two types of fragments.",
+        "back": "native fragments and support fragments."
+    },
+    {
+        "front": "The dependency that supports fragments",
+        "back": "AppCompat library\nadd to the build.gradle file not project build\ncompile 'com.android.support:appcompat-v7:XX.X'"
+    },
+    {
+        "front": "How are dependency added to a project to make then available to add in a build.gradle file.",
+        "back": "File -> Project Structure\nselect Dependencies tab\nselect  '+'  and library and navigate to location."
+    },
+    {
+        "front": "Fragments work on behalf of an ",
+        "back": "activity."
+    },
+    {
+        "front": "Framents have corresponding lifecycles to",
+        "back": "activities (to handle activities work)."
+    },
+    {
+        "front": "Fragment lifecycles methods are called by the ",
+        "back": "hosting activity, not the OS."
+    },
+    {
+        "front": "2 ways to host a UI fragment in activity",
+        "back": "1. add fragment to activity's layout\n2. add fragment to the activity's code."
+    },
+    {
+        "front": "Steps to create a UI fragment(same to create a activity)",
+        "back": "- define the strings the the user will see in res/values/strings.xml\n- compose a UI by defining widgets in a layout file\n-create the class and set its view to the layout defined\n-wire up he widgets inflated from the layout in code"
+    },
+    {
+        "front": "Container that the hosting activity will use to hold a fragment.",
+        "back": "FrameLayout"
+    },
+    {
+        "front": "A example of a activity's layout that will host a fragment.",
+        "back": "<FrameLayout\n   xmlns:android=\"http://schemas.android.com/apk/res/android\n   android:id=\"@+id/fragment_container\"\n   android:layout_width=\"match_parent\"\n   android:layout_height=\"match_parent\" />"
+    },
+    {
+        "front": "What 2 things does a FragmentManager do?",
+        "back": "Responsible for managing fragments and adding their views to the activities view hierachy."
+    },
+    {
+        "front": "FragmentManager manages/handles 2 things.",
+        "back": "-list of fragments\n-back stack of fragment tranactions."
+    },
+    {
+        "front": "Generic steps in a activities onCreate method to add a fragment.",
+        "back": "1. get the fragment manager\n2. Set the fragment = fragment manager  'dot'  the fragments activities containers ID.\n3. see if the fragment above has been constructed, if it hasn't create it, begin a transaction, add and commit."
+    },
+    {
+        "front": "Code to add a fragment in activities onCreate method",
+        "back": "FragmentManager fm = getSupportFragmentManager();\nFragment fragment = fm.findFragmentByID(Activities Framelayouts ID)\nif (fragment == null) {\n    fragment == new NameofFragmentClass();\n    fm.beginTransaction()\n            .add(Activities Framelayouts ID, fragment)\n             .commit();"
+    },
+    {
+        "front": "Adding fragments later to your code is not a good idea.",
+        "back": "True, adding fragments means you won't have to rework code to fit them in."
+    },
+    {
+        "front": "A good rule of thumb is to have no more than how many fragments on the screen.",
+        "back": "2 or 3 fragments."
+     }
+]
+}
