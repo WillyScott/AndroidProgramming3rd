@@ -1,11 +1,43 @@
-{ "cards": [
+{ "cards":[
     {
-        "front": "Test",
-        "back": "Test"
+        "front": "Method that retains fragments, called in the fragments onCreate method",
+        "back": "setRetainedInstance(true)"
     },
     {
-        "front": "Test",
-        "back": "test"
+        "front": "Generic  steps to conntect to Http and download JSON",
+        "back": "create URL()\ncreate HttpURLConnectioin()\ncreate ByteArrayOutputStream()\ncreate InputStream()\nget the HttpUrlConnection response if OK\nreadin the bytes"
+    },
+    {
+        "front": "Permission must be asked to network by.",
+        "back": "Adding newtworking permissoin to the manifest- AndroidManefest.xml\n<uses-permissions android:name=\"android.permission.INTERNET\" />"
+    },
+    {
+        "front": "Networking should be run on the main UI thread or a backgrouind thread.",
+        "back": "background thread, using for example AsyncTask."
+    },
+    {
+        "front": "API",
+        "back": "application programming interface"
+    },
+    {
+        "front": "Popular format that data is sent in for web services",
+        "back": "JSON"
+    },
+    {
+        "front": "API are mostly in this format",
+        "back": "REST"
+    },
+    {
+        "front": "Helper class for building or manipulating URI references.",
+        "back": "Uri.Builder"
+    },
+    {
+        "front": "JSON objects used to parse JSON.",
+        "back": "JSONObject and JSONArray"
+    },
+    {
+        "front": "Class to do background Http work.",
+        "back": "AsyncTack."
     }
 ]
 }
